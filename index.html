@@ -489,7 +489,7 @@
 <div class="paragraph">
 <p>This box highlights a concept explained in detail in the current chapter</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock tip lightbulb">
 <table>
 <tr>
 <td class="icon">
@@ -497,8 +497,8 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<div class="title">Concept</div>
-<p>This recaps an important concept that is explained in the text.</p>
+<p><strong>Concept</strong>
+This recaps an important concept that is explained in the text.</p>
 </div>
 </td>
 </tr>
@@ -584,7 +584,7 @@
 <p>In the rest of the book, we will design together part of a simple web application that provides a room renting system. So, let&#8217;s consider that our "Rent-o-Matic" application<span class="footnote">[<a class="footnote" href="#_footnote_4" id="_footnoteref_4" title="View footnote.">4</a>]</span> is running at <a class="bare" href="https://www.rentomatic.com">https://www.rentomatic.com</a>, and that a user wants to see the available rooms. They open the browser and type the address, then clicking on menus and buttons they reach the page with the list of all the rooms that our company rents.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s assume that this URL is <code>/rooms?status=available</code>. When the user&#8217;s browser accesses that URL, an HTTP request reaches our system, where there is a component that is waiting for HTTP connections. Let&#8217;s call this component "web framework"<span class="footnote">[<a class="footnote" href="#_footnote_5" id="_footnoteref_5" title="View footnote.">5</a>]</span></p>
+<p>Let&#8217;s assume that this URL is <code>/rooms?status=available</code>. When the user&#8217;s browser accesses that URL, an HTTP request reaches our system, where there is a component that is waiting for HTTP connections. Let&#8217;s call this component "web framework"<span class="footnote">[<a class="footnote" href="#_footnote_5" id="_footnoteref_5" title="View footnote.">5</a>]</span>.</p>
 </div>
 <div class="paragraph">
 <p>The purpose of the web framework is to understand the HTTP request and to retrieve the data that we need to provide a response. In this simple case there are two important parts of the request, namely the endpoint itself (<code>/rooms</code>), and a single query string parameter, <code>status=available</code>. Endpoints are like commands for our system, so when a user accesses one of them, they signal to the system that a specific service has been requested, which in this case is the list of all the rooms that are available for rent.</p>
@@ -607,7 +607,7 @@
 <div class="paragraph">
 <p>The business logic is an important concept in system design. You are creating a system because you have some knowledge that you think might be useful to the world, or at the very least marketable. This knowledge is, at the end of the day, a way to process data, a way to extract or present data that maybe others don&#8217;t have. A search engine can find all the web pages that are related to the terms in a query, a social network shows you the posts of people you follow and sorts them according to a specific algorithm, a travel company finds the best options for your journey between two locations, and so on. All these are good examples of business logic.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock tip lightbulb">
 <table>
 <tr>
 <td class="icon">
@@ -615,8 +615,8 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<div class="title">Business logic</div>
-<p>Business logic is the specific algorithm or process that you want to implement, the way you transform data to provide a service. It is the most important part of the system.</p>
+<p><strong>Business logic</strong>
+Business logic is the specific algorithm or process that you want to implement, the way you transform data to provide a service. It is the most important part of the system.</p>
 </div>
 </td>
 </tr>
@@ -628,7 +628,7 @@
 <div class="paragraph">
 <p>Why can&#8217;t the web framework do it? Well, the main purpose of a good system architecture is to <em>separate concerns</em>, that is to keep different responsibilities and domains separated. The web framework is there to process the HTTP protocol, and is maintained by programmers that are concerned with that specific part of the system, and adding the business logic to it mixes two very different fields.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock tip lightbulb">
 <table>
 <tr>
 <td class="icon">
@@ -636,8 +636,8 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<div class="title">Separation of concerns</div>
-<p>Different parts a system should manage different parts of the process. Whenever two separate parts of a system work on the same data or the same part of a process they are <em>coupled</em>. While coupling is unavoidable, the higher the coupling between two components the harder is to change one without affecting the other.</p>
+<p><strong>Separation of concerns</strong>
+Different parts a system should manage different parts of the process. Whenever two separate parts of a system work on the same data or the same part of a process they are <em>coupled</em>. While coupling is unavoidable, the higher the coupling between two components the harder is to change one without affecting the other.</p>
 </div>
 </td>
 </tr>
@@ -652,7 +652,7 @@
 <div class="paragraph">
 <p>So, the information that the use case wants to process is stored somewhere. Let&#8217;s call this component <em>storage system</em>. Many of you probably already pictured a database in your mind, maybe a relational one, but that is just one of the possible data sources. The abstraction represented by the storage system is: anything that the use case can access and that can provide data is a source. It might be a file, a database (either relational or not), a network endpoint, or a remote sensor.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock tip lightbulb">
 <table>
 <tr>
 <td class="icon">
@@ -660,8 +660,8 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<div class="title">Abstraction</div>
-<p>When designing a system, it is paramount to think in terms of abstractions, or building blocks. A component has a role in the system, regardless of the specific implementation of that component. The higher the level of the abstraction, the less detailed are the components. Clearly, high-level abstractions don&#8217;t consider practical problems, which is why the abstract design has to be then implemented using specific solutions or technologies.</p>
+<p><strong>Abstraction</strong>
+When designing a system, it is paramount to think in terms of abstractions, or building blocks. A component has a role in the system, regardless of the specific implementation of that component. The higher the level of the abstraction, the less detailed are the components. Clearly, high-level abstractions don&#8217;t consider practical problems, which is why the abstract design has to be then implemented using specific solutions or technologies.</p>
 </div>
 </td>
 </tr>
@@ -682,7 +682,7 @@
 <div class="paragraph">
 <p>For example, let&#8217;s assume the use case called directly a specific Python library to access PostgreSQL such as <a href="https://www.psycopg.org/">psycopg</a>. This would couple the use case with that specific source, and a change of database would result in a change of its code. This is far from being ideal, as the use case contains the business logic, which has not changed moving from one database system to the other. Parts of the system that do not contain the business logic should be treated like implementation details.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock tip lightbulb">
 <table>
 <tr>
 <td class="icon">
@@ -690,8 +690,8 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<div class="title">Implementation detail</div>
-<p>A specific solution or technology is called a <em>detail</em> when it is not central to the design as a whole. The word doesn&#8217;t refer to the inherent complexity of the subject, which might be greater than that of more central parts.</p>
+<p><strong>Implementation detail</strong>
+A specific solution or technology is called a <em>detail</em> when it is not central to the design as a whole. The word doesn&#8217;t refer to the inherent complexity of the subject, which might be greater than that of more central parts.</p>
 </div>
 </td>
 </tr>
@@ -704,9 +704,9 @@
 <p>How can we avoid strong coupling? A simple solution is called <em>inversion of control</em>, and I will briefly sketch it here, and show a proper implementation in a later section of the book, when we will implement this very example.</p>
 </div>
 <div class="paragraph">
-<p>Inversion of control happens in two phases. First, the called object (the database in this case) is wrapped with a standard interface. This is a set of functionalities shared by every implementation of the target, and each interface translates the functionalities to calls to the specific language[^language] of the wrapped implementation.</p>
+<p>Inversion of control happens in two phases. First, the called object (the database in this case) is wrapped with a standard interface. This is a set of functionalities shared by every implementation of the target, and each interface translates the functionalities to calls to the specific language<span class="footnote">[<a class="footnote" href="#_footnote_6" id="_footnoteref_6" title="View footnote.">6</a>]</span> of the wrapped implementation.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock tip lightbulb">
 <table>
 <tr>
 <td class="icon">
@@ -714,8 +714,8 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<div class="title">Inversion of control</div>
-<p>A technique used to avoid strong coupling between components of a system, that involves wrapping them so that they expose a certain interface. A component expecting that interface can then connect to them without knowing the details of the specific implementation, and thus being strongly coupled to the interface instead of the specific implementation.</p>
+<p><strong>Inversion of control</strong>
+A technique used to avoid strong coupling between components of a system, that involves wrapping them so that they expose a certain interface. A component expecting that interface can then connect to them without knowing the details of the specific implementation, and thus being strongly coupled to the interface instead of the specific implementation.</p>
 </div>
 </td>
 </tr>
@@ -723,9 +723,6 @@
 </div>
 <div class="paragraph">
 <p>A real world example of this is that of power plugs: electric appliances are designed to be connected not with specific power plugs, but to any power plug that is build according to the specification (size, number of poles, etc). When you buy a TV in the UK, you expect it to come with a UK plug (BS 1363). If it doesn&#8217;t, you need an <em>adapter</em> that allows you to plug electronic devices into sockets of a foreign nation. In this case, we need to connect the use case (TV) to a database (power system) that have not been designed to match a common interface.</p>
-</div>
-<div class="paragraph">
-<p>[^language]: The word <em>language</em>, here, is meant in its broader sense. It might be a programming language, but also an API, a data format, or a protocol.</p>
 </div>
 <div class="paragraph">
 <p>In the example we are discussing, the use case needs to extract all rooms with a given status, so the database wrapper needs to provide a single entry point that we might call <code>list_rooms_with_status</code>.</p>
@@ -794,7 +791,7 @@
 <div class="title">Figure 10. A database replaced by a more trivial file-based storage</div>
 </div>
 <div class="paragraph">
-<p>As you can see, both changes would require the replacement of some components. Aafter all, we need different code to manage a command line instead of a web page. But the external shape of the system doesn&#8217;t change, neither does the way data flows. We created a system in which the user interface (web framework, command-line interface) and the data source (relational database, text files) are details of the implementation, and not core parts of it.</p>
+<p>As you can see, both changes would require the replacement of some components. After all, we need different code to manage a command line instead of a web page. But the external shape of the system doesn&#8217;t change, neither does the way data flows. We created a system in which the user interface (web framework, command-line interface) and the data source (relational database, text files) are details of the implementation, and not core parts of it.</p>
 </div>
 <div class="paragraph">
 <p>The main immediate advantage of a layered architecture, however, is testability. When you clearly separate components you clearly establish the data each of them has to receive and produce, so you can ideally disconnect a single component and test it in isolation. Let&#8217;s take the Web framework component that we added and consider it for a moment forgetting the rest of the architecture. We can ideally connect a tester to its inputs and outputs as you can see in the figure</p>
@@ -833,7 +830,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>In this chapter I will analyse the set of software design principles collectively known as "clean architecture". While this specific name has been introduced by RObert Martin, the concepts it pushes are part of software engineering, and have been successfully used for decades.</p>
+<p>In this chapter I will analyse the set of software design principles collectively known as "clean architecture". While this specific name has been introduced by Robert Martin, the concepts it pushes are part of software engineering, and have been successfully used for decades.</p>
 </div>
 <div class="paragraph">
 <p>Before we dive into a possible implementation of them, which is the core of this book, we need to analyse more in depth the structure of the clean architecture and the components you can find in the system designed following it.</p>
@@ -963,7 +960,7 @@
 <p>External systems have full access to gateways, use cases, and entities. While it is easy to understand the relationship with gateways, which are created to wrap specific systems, it might be less clear what external systems should do with use cases and entities. As for use cases, external systems are usually the parts of the system that trigger them, being the way users run the business logic. A user clicking on a button, visiting a URL, or running a command, are typical examples of interactions with an external system that runs a use case directly. As for entities, an external system can directly process them, for example to return them in a JSON payload, or to map input data into a domain model.</p>
 </div>
 <div class="paragraph">
-<p>I want to point out a difference between external systems that are used by use cases and external systems that want to call use cases. In the first case the direction of the communication is outwards, and we know that in the clan architecture we can&#8217;t go outwards without interfaces. Thus, when we access an external systems from a use case we always need an interface. When the external system wants to call use cases, instead, the direction of the communication is inwards, and this is allowed directly, as external layers have full access to the internal ones.</p>
+<p>I want to point out a difference between external systems that are used by use cases and external systems that want to call use cases. In the first case the direction of the communication is outwards, and we know that in the clean architecture we can&#8217;t go outwards without interfaces. Thus, when we access an external system from a use case we always need an interface. When the external system wants to call use cases, instead, the direction of the communication is inwards, and this is allowed directly, as external layers have full access to the internal ones.</p>
 </div>
 <div class="paragraph">
 <p>This, practically speaking, translates into two extreme cases, well represented by a database and a web framework. When a use case accesses a storage system there should be a loose coupling between the two, which is why we wrap the storage with an interface and assume that in the use case. When the web framework calls a use case, instead, the code of the endpoint doesn&#8217;t need any interface to access it.</p>
@@ -975,13 +972,8 @@
 <div class="paragraph">
 <p>The deeper a layer is in this architecture, the more abstract the content is. The inner layers contain representations of business concepts, while the outer layers contain specific details about the real-life implementation. The communication between elements that live in the same layer is unrestricted, but when you want to communicate with elements that have been assigned to other layers you have to follow one simple rule. This rule is the most important thing in a clean architecture, possibly being the core expression of the clean architecture itself.</p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">The Golden Rule</div>
-<div class="paragraph text-center">
-<p>Talk inwards with simple structures, talk outwards through interfaces.</p>
-</div>
-</div>
+<div class="paragraph">
+<p><strong>The Golden Rule: talk inwards with simple structures, talk outwards through interfaces.</strong></p>
 </div>
 <div class="paragraph">
 <p>Your elements should talk inwards, that is pass data to more abstract elements, using basic structures, that is entities and everything provided by the programming language you are using.</p>
@@ -999,10 +991,10 @@
 <div class="sect2">
 <h3 id="_apis_and_shades_of_grey">2.5. APIs and shades of grey</h3>
 <div class="paragraph">
-<p>The word API is of uttermost importance in a clean architecture. Every layer may be accessed by elements living in inner layers by an API, that is a fixed<span class="footnote">[<a class="footnote" href="#_footnote_6" id="_footnoteref_6" title="View footnote.">6</a>]</span> collection of entry points (methods or objects).</p>
+<p>The word API is of uttermost importance in a clean architecture. Every layer may be accessed by elements living in inner layers by an API, that is a fixed<span class="footnote">[<a class="footnote" href="#_footnote_7" id="_footnoteref_7" title="View footnote.">7</a>]</span> collection of entry points (methods or objects).</p>
 </div>
 <div class="paragraph">
-<p>The separation between layers and the content of each layer are not always fixed and immutable. A well-designed system shall also cope with practical world issues such as performances, for example, or other specific needs. When designing an architecture it is very important to know "what is where and why", and this is even more important when you "bend" the rules. Many issues do not have a black-or-white answer, and many decisions are "shades of grey", that is it is up to you to justify why you put something in a given place.</p>
+<p>The separation between layers and the content of each layer is not always fixed and immutable. A well-designed system shall also cope with practical world issues such as performances, for example, or other specific needs. When designing an architecture it is very important to know "what is where and why", and this is even more important when you "bend" the rules. Many issues do not have a black-or-white answer, and many decisions are "shades of grey", that is it is up to you to justify why you put something in a given place.</p>
 </div>
 <div class="paragraph">
 <p>Keep in mind, however, that you should not break the <em>structure</em> of the clean architecture, and be particularly very strict about the data flow. If you break the data flow, you are basically invalidating the whole structure. You should try as hard as possible not to introduce solutions that are based on a break in the data flow, but realistically speaking, if this saves money, do it.</p>
@@ -1024,10 +1016,8 @@
 <div class="sectionbody">
 <div class="quoteblock">
 <blockquote><div class="paragraph">
-<p>Joshua/WOPR: Wouldn&#8217;t you prefer a good game of chess?</p>
-</div>
-<div class="paragraph">
-<p>David: Later. Let&#8217;s play Global Thermonuclear War.</p>
+<p>Joshua/WOPR: Wouldn&#8217;t you prefer a good game of chess?
+David: Later. Let&#8217;s play Global Thermonuclear War.</p>
 </div></blockquote>
 <div class="attribution">
 &#8212; Wargames, 1983
@@ -1042,7 +1032,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>An unique identifier</p>
+<p>A unique identifier</p>
 </li>
 <li>
 <p>A size in square meters</p>
@@ -1068,7 +1058,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>$ git clone https://github.com/pycabook/rentomatic&#x000A;$ cd rentomatic&#x000A;$ git checkout --track origin/second-edition</code></pre>
+<pre class="rouge highlight"><code data-lang="sh"><span class="nv">$ </span>git clone https://github.com/pycabook/rentomatic&#x000A;<span class="nv">$ </span><span class="nb">cd </span>rentomatic&#x000A;<span class="nv">$ </span>git checkout <span class="nt">--track</span> origin/second-edition</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1092,7 +1082,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>=========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 0 items&#x000A;&#x000A;========================== no tests ran in 0.02s ==========================</code></pre>
+<pre class="rouge highlight"><code data-lang="text">=========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 0 items&#x000A;&#x000A;========================== no tests ran in 0.02s ==========================</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1165,7 +1155,7 @@
 </table>
 </div>
 <div class="paragraph">
-<p>The model is very simple and requires little explanation. I&#8217;m using dataclasses as they are a compact way to implement simple models like this, but you are free to use standard classes and to implement the method <code>__init__</code> explicitely.</p>
+<p>The model is very simple and requires little explanation. I&#8217;m using dataclasses as they are a compact way to implement simple models like this, but you are free to use standard classes and to implement the method <code>__init__</code> explicitly.</p>
 </div>
 <div class="paragraph">
 <p>Given that we will receive data to initialise this model from other layers, and that this data is likely to be a dictionary, it is useful to create a method that allows us to initialise the model from this type of structure. The code can go into the same file we created before, and is</p>
@@ -1350,10 +1340,10 @@
 <p>The next thing you might notice is that I used a simple function. In the first edition of this book I used a class for the use case, and thanks to the nudge of a couple of readers I started to question my choice, so I want to briefly discuss the options you have.</p>
 </div>
 <div class="paragraph">
-<p>The use cases represents the business logic, a process, which means that the simplest implementation you can have in a programming language is a function: some code that receives input arguments and returns output data. A class is however another option, as in essence it is a collection of variables and functions. So, as in many other cases, the question is if you should use a function or a class, and my answer is that it depends on the degree of complexity of the algorithm that you are implementing.</p>
+<p>The use case represents the business logic, a process, which means that the simplest implementation you can have in a programming language is a function: some code that receives input arguments and returns output data. A class is however another option, as in essence it is a collection of variables and functions. So, as in many other cases, the question is if you should use a function or a class, and my answer is that it depends on the degree of complexity of the algorithm that you are implementing.</p>
 </div>
 <div class="paragraph">
-<p>Your business logic might be complicated, and require the connection with several external systems, though, each one with a specific initilisation, while in this simple case I just pass in the repository. So, in principle, I don&#8217;t see anything wrong in using classes for use cases, should you need more structure for your algorithms, but be careful not to use them when a simpler solution (functions) can perform the same job, which is the mistake I made in the previous version of this code. Remember that code has to be maintained, so the simpler it is, the better.</p>
+<p>Your business logic might be complicated, and require the connection with several external systems, though, each one with a specific initialisation, while in this simple case I just pass in the repository. So, in principle, I don&#8217;t see anything wrong in using classes for use cases, should you need more structure for your algorithms, but be careful not to use them when a simpler solution (functions) can perform the same job, which is the mistake I made in the previous version of this code. Remember that code has to be maintained, so the simpler it is, the better.</p>
 </div>
 <div class="admonitionblock note github">
 <table>
@@ -1554,7 +1544,7 @@
 <div class="listingblock">
 <div class="title">requirements/prod.txt</div>
 <div class="content">
-<pre class="rouge highlight"><code>Flask</code></pre>
+<pre class="rouge highlight"><code data-lang="text">Flask</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1563,7 +1553,7 @@
 <div class="listingblock">
 <div class="title">requirements/test.txt</div>
 <div class="content">
-<pre class="rouge highlight"><code>-r prod.txt&#x000A;pytest&#x000A;tox&#x000A;coverage&#x000A;pytest-cov&#x000A;pytest-flask</code></pre>
+<pre class="rouge highlight"><code data-lang="text">-r prod.txt&#x000A;pytest&#x000A;tox&#x000A;coverage&#x000A;pytest-cov&#x000A;pytest-flask</code></pre>
 </div>
 </div>
 <div class="admonitionblock note github">
@@ -1628,7 +1618,7 @@
 <p>Before we create the proper setup of the webserver, we want to create the endpoint that will be exposed. Endpoints are ultimately functions that are run when a user sends a request to a certain URL, so we can still work with TDD, as the final goal is to have code that produces certain results.</p>
 </div>
 <div class="paragraph">
-<p>The problem we have testing an endpoint is that we need the webserver to be up and running when we hit the test URLs. The webserver itself is an external system so we won&#8217;t test it, but the code that provides the endpoint is part of our application<span class="footnote">[<a class="footnote" href="#_footnote_7" id="_footnoteref_7" title="View footnote.">7</a>]</span>. It is actually a gateway, that is an interface that allows an HTTP framework to access the use cases.</p>
+<p>The problem we have testing an endpoint is that we need the webserver to be up and running when we hit the test URLs. The webserver itself is an external system so we won&#8217;t test it, but the code that provides the endpoint is part of our application<span class="footnote">[<a class="footnote" href="#_footnote_8" id="_footnoteref_8" title="View footnote.">8</a>]</span>. It is actually a gateway, that is an interface that allows an HTTP framework to access the use cases.</p>
 </div>
 <div class="paragraph">
 <p>The extension <code>pytest-flask</code> allows us to run Flask, simulate HTTP requests, and test the HTTP responses. This extension hides a lot of automation, so it might be considered a bit "magic" at a first glance. When you install it some fixtures like <code>client</code> are available automatically, so you don&#8217;t need to import them. Moreover, it tries to access another fixture named <code>app</code> that you have to define. This is thus the first thing to do.</p>
@@ -1779,7 +1769,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</code></pre>
+<pre class="rouge highlight"><code data-lang="text">* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2087,7 +2077,7 @@
 <p>Through the method <code>_format_message()</code> we enable the class to accept both string messages and Python exceptions, which is very handy when dealing with external libraries that can raise exceptions we do not know or do not want to manage.</p>
 </div>
 <div class="paragraph">
-<p>The error types containerd in the class <code>ResponseTypes</code> are very similar to HTTP errors, and this will be useful later when we will return responses from the web framework. <code>PARAMETERS_ERROR</code> signals that something was wrong in the input parameters passed by the request. <code>RESOURCE_ERROR</code> signals that the process ended correctly, but the requested resource is not available, for example when reading a specific value from a data storage. Last, <code>SYSTEM_ERROR</code> signals that something went wrong with the process itself, and will be used mostly to signal an exception in the Python code.</p>
+<p>The error types contained in the class <code>ResponseTypes</code> are very similar to HTTP errors, and this will be useful later when we will return responses from the web framework. <code>PARAMETERS_ERROR</code> signals that something was wrong in the input parameters passed by the request. <code>RESOURCE_ERROR</code> signals that the process ended correctly, but the requested resource is not available, for example when reading a specific value from a data storage. Last, <code>SYSTEM_ERROR</code> signals that something went wrong with the process itself, and will be used mostly to signal an exception in the Python code.</p>
 </div>
 <div class="admonitionblock note github">
 <table>
@@ -2167,7 +2157,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>TypeError: room_list_use_case() missing 1 required positional argument: 'request'</code></pre>
+<pre class="rouge highlight"><code data-lang="text">TypeError: room_list_use_case() missing 1 required positional argument: 'request'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2249,10 +2239,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>and if you look at the HTTP response[^devtools] you can see an HTTP 500 error, which is exactly the mapping of our <code>SystemError</code> use case error, which in turn signals a Python exception, which is in the <code>message</code> part of the error.</p>
-</div>
-<div class="paragraph">
-<p>[^devtools]: For example using the browser developer tools. In Chrome and Firefox, press F12 and open the Network tab, then refresh the page.</p>
+<p>and if you look at the HTTP response<span class="footnote">[<a class="footnote" href="#_footnote_9" id="_footnoteref_9" title="View footnote.">9</a>]</span> you can see an HTTP 500 error, which is exactly the mapping of our <code>SystemError</code> use case error, which in turn signals a Python exception, which is in the <code>message</code> part of the error.</p>
 </div>
 <div class="paragraph">
 <p>This error comes from the repository, which has not been migrated to the new API. We need then to change the method <code>list</code> of the class <code>MemRepo</code> to accept the parameter <code>filters</code> and to act accordingly. Pay attention to this point. The filters might have been considered part of the business logic and implemented in the use case itself, but we decided to leverage what the storage system can do, so we moved filtering in that external system. This is a reasonable choice as databases can usually perform filtering and ordering very well. Even though the in-memory storage we are currently using is not a database, we are preparing to use a real external storage.</p>
@@ -2393,7 +2380,7 @@
 <p>Let&#8217;s start with a repository based on a popular SQL database, <a href="https://www.postgresql.org">PostgreSQL</a>. It can be accessed from Python in many ways, but the best one is probably through the <a href="https://www.sqlalchemy.org">SQLAlchemy</a> interface. SQLAlchemy is an ORM, a package that maps objects (as in object-oriented) to a relational database. ORMs can normally be found in web frameworks like Django or in standalone packages like the one we are considering.</p>
 </div>
 <div class="paragraph">
-<p>The important thing about ORMs is that they are very good examples of something you shouldn&#8217;t try to mock. Properly mocking the SQLAlchemy structures that are used when querying the DB results in very complex code that is difficult to write and almost impossible to maintain, as every single change in the queries results in a series of mocks that have to be written again.<span class="footnote">[<a class="footnote" href="#_footnote_8" id="_footnoteref_8" title="View footnote.">8</a>]</span></p>
+<p>The important thing about ORMs is that they are very good examples of something you shouldn&#8217;t try to mock. Properly mocking the SQLAlchemy structures that are used when querying the DB results in very complex code that is difficult to write and almost impossible to maintain, as every single change in the queries results in a series of mocks that have to be written again<span class="footnote">[<a class="footnote" href="#_footnote_10" id="_footnoteref_10" title="View footnote.">10</a>]</span>.</p>
 </div>
 <div class="paragraph">
 <p>We need therefore to set up an integration test. The idea is to create the DB, set up the connection with SQLAlchemy, test the condition we need to check, and destroy the database. Since the action of creating and destroying the DB can be expensive in terms of time, we might want to do it just at the beginning and at the end of the whole test suite, but even with this change, the tests will be slow. This is why we will also need to use labels to avoid running them every time we run the suite. Let&#8217;s face this complex task one step at a time.</p>
@@ -2427,7 +2414,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>$ pytest -svv -m integration&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items / 35 deselected / 1 selected&#x000A;&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy PASSED&#x000A;&#x000A;==================== 1 passed, 35 deselected in 0.20s ====================</code></pre>
+<pre class="rouge highlight"><code data-lang="text">$ pytest -svv -m integration&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items / 35 deselected / 1 selected&#x000A;&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy PASSED&#x000A;&#x000A;==================== 1 passed, 35 deselected in 0.20s ====================</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2456,7 +2443,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>$ pytest -svv --integration&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items&#x000A;&#x000A;...&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy PASSED&#x000A;...&#x000A;&#x000A;========================== 36 passed in 0.26s ============================</code></pre>
+<pre class="rouge highlight"><code data-lang="text">$ pytest -svv --integration&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items&#x000A;&#x000A;...&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy PASSED&#x000A;...&#x000A;&#x000A;========================== 36 passed in 0.26s ============================</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2464,7 +2451,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>$ pytest -svv&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items&#x000A;&#x000A;...&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy SKIPPED&#x000A;...&#x000A;&#x000A;==================== 35 passed, 1 skipped in 0.27s =======================</code></pre>
+<pre class="rouge highlight"><code data-lang="text">$ pytest -svv&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items&#x000A;&#x000A;...&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy SKIPPED&#x000A;...&#x000A;&#x000A;==================== 35 passed, 1 skipped in 0.27s =======================</code></pre>
 </div>
 </div>
 <div class="admonitionblock note github">
@@ -2493,7 +2480,7 @@
 <div class="listingblock">
 <div class="title">requirements/prod.txt</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="txt">Flask&#x000A;SQLAlchemy&#x000A;psycopg2</code></pre>
+<pre class="rouge highlight"><code data-lang="text">Flask&#x000A;SQLAlchemy&#x000A;psycopg2</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2567,7 +2554,7 @@
 <div class="listingblock">
 <div class="title">requirements/test.txt</div>
 <div class="content">
-<pre class="rouge highlight"><code>-r prod.txt&#x000A;tox&#x000A;coverage&#x000A;pytest&#x000A;pytest-cov&#x000A;pytest-flask&#x000A;docker-compose</code></pre>
+<pre class="rouge highlight"><code data-lang="text">-r prod.txt&#x000A;tox&#x000A;coverage&#x000A;pytest&#x000A;pytest-cov&#x000A;pytest-flask&#x000A;docker-compose</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2718,7 +2705,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>$ ./manage.py test -- --integration&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items&#x000A;&#x000A;...&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy PASSED&#x000A;...&#x000A;&#x000A;========================== 36 passed in 0.26s ============================</code></pre>
+<pre class="rouge highlight"><code data-lang="text">$ ./manage.py test -- --integration&#x000A;========================== test session starts ===========================&#x000A;platform linux -- Python XXXX, pytest-XXXX, py-XXXX, pluggy-XXXX --&#x000A;cabook/venv3/bin/python3&#x000A;cachedir: .cache&#x000A;rootdir: cabook/code/calc, inifile: pytest.ini&#x000A;plugins: cov-XXXX&#x000A;collected 36 items&#x000A;&#x000A;...&#x000A;tests/repository/postgres/test_postgresrepo.py::test_dummy PASSED&#x000A;...&#x000A;&#x000A;========================== 36 passed in 0.26s ============================</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2834,7 +2821,7 @@
 <div class="listingblock">
 <div class="title">requirements/prod.txt</div>
 <div class="content">
-<pre class="rouge highlight"><code>Flask&#x000A;SQLAlchemy&#x000A;psycopg2&#x000A;pymongo</code></pre>
+<pre class="rouge highlight"><code data-lang="text">Flask&#x000A;SQLAlchemy&#x000A;psycopg2&#x000A;pymongo</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2954,7 +2941,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>which makes use of the similarity between the filters of the Rent-o-matic project and the ones of the MongoDB system.<span class="footnote">[<a class="footnote" href="#_footnote_9" id="_footnoteref_9" title="View footnote.">9</a>]</span></p>
+<p>which makes use of the similarity between the filters of the Rent-o-matic project and the ones of the MongoDB system<span class="footnote">[<a class="footnote" href="#_footnote_11" id="_footnoteref_11" title="View footnote.">11</a>]</span>.</p>
 </div>
 <div class="admonitionblock note github">
 <table>
@@ -3071,7 +3058,7 @@
 <div class="listingblock">
 <div class="title">requirements/prod.txt</div>
 <div class="content">
-<pre class="rouge highlight"><code>Flask&#x000A;SQLAlchemy&#x000A;psycopg2&#x000A;pymongo&#x000A;gunicorn</code></pre>
+<pre class="rouge highlight"><code data-lang="text">Flask&#x000A;SQLAlchemy&#x000A;psycopg2&#x000A;pymongo&#x000A;gunicorn</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3131,7 +3118,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>Building web&#x000A;Step 1/7 : FROM python:3&#x000A; ---&gt; 768307cdb962&#x000A;Step 2/7 : ENV PYTHONUNBUFFERED 1&#x000A; ---&gt; Using cache&#x000A; ---&gt; 0f2bb60286d3&#x000A;Step 3/7 : RUN mkdir /opt/code&#x000A; ---&gt; Using cache&#x000A; ---&gt; e1278ef74291&#x000A;Step 4/7 : RUN mkdir /opt/requirements&#x000A; ---&gt; Using cache&#x000A; ---&gt; 6d23f8abf0eb&#x000A;Step 5/7 : WORKDIR /opt/code&#x000A; ---&gt; Using cache&#x000A; ---&gt; 8a3b6ae6d21c&#x000A;Step 6/7 : ADD requirements /opt/requirements&#x000A; ---&gt; Using cache&#x000A; ---&gt; 75133f765531&#x000A;Step 7/7 : RUN pip install -r /opt/requirements/prod.txt&#x000A; ---&gt; Using cache&#x000A; ---&gt; db644df9ba04&#x000A;&#x000A;Successfully built db644df9ba04&#x000A;Successfully tagged production_web:latest</code></pre>
+<pre class="rouge highlight"><code data-lang="text">Building web&#x000A;Step 1/7 : FROM python:3&#x000A; ---&gt; 768307cdb962&#x000A;Step 2/7 : ENV PYTHONUNBUFFERED 1&#x000A; ---&gt; Using cache&#x000A; ---&gt; 0f2bb60286d3&#x000A;Step 3/7 : RUN mkdir /opt/code&#x000A; ---&gt; Using cache&#x000A; ---&gt; e1278ef74291&#x000A;Step 4/7 : RUN mkdir /opt/requirements&#x000A; ---&gt; Using cache&#x000A; ---&gt; 6d23f8abf0eb&#x000A;Step 5/7 : WORKDIR /opt/code&#x000A; ---&gt; Using cache&#x000A; ---&gt; 8a3b6ae6d21c&#x000A;Step 6/7 : ADD requirements /opt/requirements&#x000A; ---&gt; Using cache&#x000A; ---&gt; 75133f765531&#x000A;Step 7/7 : RUN pip install -r /opt/requirements/prod.txt&#x000A; ---&gt; Using cache&#x000A; ---&gt; db644df9ba04&#x000A;&#x000A;Successfully built db644df9ba04&#x000A;Successfully tagged production_web:latest</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3205,7 +3192,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>psql (13.0 (Debian 13.0-1.pgdg100+1))&#x000A;Type "help" for help.&#x000A;&#x000A;postgres=# \l&#x000A;                                  List of databases&#x000A;    Name     |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges&#x000A;-------------+----------+----------+------------+------------+----------------------&#x000A; application | postgres | UTF8     | en_US.utf8 | en_US.utf8 |&#x000A; postgres    | postgres | UTF8     | en_US.utf8 | en_US.utf8 |&#x000A; template0   | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +&#x000A;             |          |          |            |            | postgres=CTc/postgres&#x000A; template1   | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +&#x000A;             |          |          |            |            | postgres=CTc/postgres&#x000A;(4 rows)&#x000A;&#x000A;postgres=#</code></pre>
+<pre class="rouge highlight"><code data-lang="text">psql (13.0 (Debian 13.0-1.pgdg100+1))&#x000A;Type "help" for help.&#x000A;&#x000A;postgres=# \l&#x000A;                                  List of databases&#x000A;    Name     |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges&#x000A;-------------+----------+----------+------------+------------+----------------------&#x000A; application | postgres | UTF8     | en_US.utf8 | en_US.utf8 |&#x000A; postgres    | postgres | UTF8     | en_US.utf8 | en_US.utf8 |&#x000A; template0   | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +&#x000A;             |          |          |            |            | postgres=CTc/postgres&#x000A; template1   | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +&#x000A;             |          |          |            |            | postgres=CTc/postgres&#x000A;(4 rows)&#x000A;&#x000A;postgres=#</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3213,7 +3200,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>postgres=# \c application&#x000A;You are now connected to database "application" as user "postgres".&#x000A;application=#</code></pre>
+<pre class="rouge highlight"><code data-lang="text">postgres=# \c application&#x000A;You are now connected to database "application" as user "postgres".&#x000A;application=#</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3221,7 +3208,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code>application=# \dt&#x000A;        List of relations&#x000A; Schema | Name | Type  |  Owner&#x000A;--------+------+-------+----------&#x000A; public | room | table | postgres&#x000A;(1 row)&#x000A;&#x000A;application=# \d room&#x000A;                                     Table "public.room"&#x000A;  Column   |         Type          | Nullable |             Default&#x000A;-----------+-----------------------+----------+----------------------------------&#x000A; id        | integer               | not null | nextval('room_id_seq'::regclass)&#x000A; code      | character varying(36) | not null |&#x000A; size      | integer               |          |&#x000A; price     | integer               |          |&#x000A; longitude | double precision      |          |&#x000A; latitude  | double precision      |          |&#x000A;Indexes:&#x000A;    "room_pkey" PRIMARY KEY, btree (id)&#x000A;&#x000A;application=#</code></pre>
+<pre class="rouge highlight"><code data-lang="text">application=# \dt&#x000A;        List of relations&#x000A; Schema | Name | Type  |  Owner&#x000A;--------+------+-------+----------&#x000A; public | room | table | postgres&#x000A;(1 row)&#x000A;&#x000A;application=# \d room&#x000A;                                     Table "public.room"&#x000A;  Column   |         Type          | Nullable |             Default&#x000A;-----------+-----------------------+----------+----------------------------------&#x000A; id        | integer               | not null | nextval('room_id_seq'::regclass)&#x000A; code      | character varying(36) | not null |&#x000A; size      | integer               |          |&#x000A; price     | integer               |          |&#x000A; longitude | double precision      |          |&#x000A; latitude  | double precision      |          |&#x000A;Indexes:&#x000A;    "room_pkey" PRIMARY KEY, btree (id)&#x000A;&#x000A;application=#</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3284,7 +3271,20 @@
 <p>I will track here changes between releases of the book, following <a href="https://semver.org/">Semantic Versioning</a>. A change in the <strong>major</strong> number means an incompatible change, that is a big rewrite of the book, also known as 2nd edition, 3rd edition, and so on. A change in the <strong>minor</strong> number means that something important was added to the content, like a new section or chapter. A change in the <strong>patch</strong> number signals minor fixes like typos in the text or the code, rewording of sentences, and so on.</p>
 </div>
 <div class="paragraph">
-<p><strong>Current version</strong>: 2.0.0</p>
+<p><strong>Current version</strong>: 2.0.1</p>
+</div>
+<div class="paragraph">
+<p><strong>Version 2.0.1 (2021-02-14)</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GitHub users <a class="bare" href="https://github.com/1110sillabo">https://github.com/1110sillabo</a> and the tireless <a href="https://github.com/soulfulfaust">Faust Gertz</a> kindly submitted some PRs to fix typos. Thanks!</p>
+</li>
+<li>
+<p>First version converted from Mau sources into Asciidoctor</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><strong>Version 2.0.0 (2020-12-30)</strong></p>
@@ -3493,22 +3493,28 @@
 <a href="#_footnoteref_5">5</a>. There are many more layers that the HTTP request has to go through before reaching the actual web framework, for example the web server, but since the purpose of those layers is mostly to increase performances, I am not going to consider them until the end of the book.
 </div>
 <div class="footnote" id="_footnote_6">
-<a href="#_footnoteref_6">6</a>. here "fixed" means "the same among every implementation". An API may obviously change in time.
+<a href="#_footnoteref_6">6</a>. The word <em>language</em>, here, is meant in its broader sense. It might be a programming language, but also an API, a data format, or a protocol.
 </div>
 <div class="footnote" id="_footnote_7">
-<a href="#_footnoteref_7">7</a>. We could, in theory, create a pure component that receives parameters and returns a JSON object, and then wrap this component into an endpoint. This way, the component would be strictly part of the internal system and the endpoint of the external one, but both would have to be created in the Gateway layer. This looks overkill, at least for the simple example we are discussing here, so I will keep them together and test them as a single component.
+<a href="#_footnoteref_7">7</a>. Here "fixed" means "the same among every implementation". An API may obviously change in time.
 </div>
 <div class="footnote" id="_footnote_8">
-<a href="#_footnoteref_8">8</a>. unless you consider things like `sessionmaker_mock()().query.assert_called_with(Room)` something attractive. And this was by far the simplest mock I had to write.
+<a href="#_footnoteref_8">8</a>. We could, in theory, create a pure component that receives parameters and returns a JSON object, and then wrap this component into an endpoint. This way, the component would be strictly part of the internal system and the endpoint of the external one, but both would have to be created in the Gateway layer. This looks overkill, at least for the simple example we are discussing here, so I will keep them together and test them as a single component.
 </div>
 <div class="footnote" id="_footnote_9">
-<a href="#_footnoteref_9">9</a>. The similitude between the two systems is not accidental, as I was studying MongoDB at the time I wrote the first article about clean architectures, so I was obviously influenced by it.
+<a href="#_footnoteref_9">9</a>. For example using the browser developer tools. In Chrome and Firefox, press F12 and open the Network tab, then refresh the page.
+</div>
+<div class="footnote" id="_footnote_10">
+<a href="#_footnoteref_10">10</a>. unless you consider things like <code>sessionmaker_mock()().query.assert_called_with(Room)</code> something attractive. And this was by far the simplest mock I had to write.
+</div>
+<div class="footnote" id="_footnote_11">
+<a href="#_footnoteref_11">11</a>. The similitude between the two systems is not accidental, as I was studying MongoDB at the time I wrote the first article about clean architectures, so I was obviously influenced by it.
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2020-12-30 23:40:15 UTC
+Last updated 2021-02-14 16:42:48 UTC
 </div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
